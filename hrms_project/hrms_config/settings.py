@@ -96,9 +96,9 @@ DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL'),
         conn_max_age=600,
-        conn_health_checks=True,
     )
 }
+DATABASES['default']['CONN_HEALTH_CHECKS'] = True
 
 
 
@@ -195,4 +195,3 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOW_CREDENTIALS = False
-
